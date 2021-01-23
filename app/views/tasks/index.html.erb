@@ -1,0 +1,17 @@
+<div class="p-3">
+  <h1>My Tasks</h1>
+  <p>
+    <%= link_to "Create new task >>", tasks_new_path %>
+  </p>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <h3>
+          <%= link_to task.title, task_path(task.id) %>
+        </h3>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+

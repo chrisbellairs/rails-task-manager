@@ -1,0 +1,11 @@
+<div class="p-3">
+  <h2>
+    <%= @task.title  %>
+  </h2>
+  <p>
+    <%= @task.details  %>
+  </p>
+  <%= link_to 'Edit', edit_task_path(@task) %>
+  <%= link_to 'Back', tasks_path %>
+  <%= link_to 'Delete', delete_task_path(@task), method: :delete %>
+</div>
